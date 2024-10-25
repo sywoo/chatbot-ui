@@ -5,7 +5,7 @@ def generate_response(query):
     return "GPT-3.5 응답: " + query
 
 st.title("자비스")
-user_input = st.text_input("여기에 메시지를 입력하세요")
+user_input = st.text_input("how can I help you, sir?")
 if user_input:
     response = generate_response(user_input)
-    st.write("챗봇 응답:", response)
+    st.write("자비스:", response)
