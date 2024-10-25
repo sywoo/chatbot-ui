@@ -1,5 +1,16 @@
 import streamlit as st
 
+st.markdown(
+    """
+<style>
+    .st-emotion-cache-janbn0 {
+        flex-direction: row-reverse;
+        text-align: right;
+    }
+</style>
+""",
+    unsafe_allow_html=True,
+)
 
 st.title("💬 업무비서 자비스")
 # st.caption("🚀 A Streamlit chatbot powered by CRAFTERS")
@@ -17,4 +28,4 @@ if prompt := st.chat_input():
 
     msg = "답변" # 여기에 모델 답변 SET 하면 답변 출력됨
     st.session_state.messages.append({"role": "assistant", "content": msg})
-    # st.chat_message("assistant").write(msg)
+    st.chat_message("assistant").write(msg)
