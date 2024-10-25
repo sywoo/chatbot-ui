@@ -1,5 +1,4 @@
 import streamlit as st
-from streamlit_chat import message
 
 def generate_response(query):
     # GPT-3.5를 이용한 응답 생성
