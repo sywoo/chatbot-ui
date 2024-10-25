@@ -5,8 +5,8 @@ def generate_response(query):
     return "GPT-3.5 응답: " + query
 
 # st.title("자비스")
-st.title("💬 Chatbot")
-st.caption("🚀 A Streamlit chatbot powered by OpenAI")
+st.title("💬 업무비서 자비스")
+st.caption("🚀 A Streamlit chatbot powered by CRAFTERS")
 
 user_input = st.text_input("how can I help you, sir?")
 if user_input:
