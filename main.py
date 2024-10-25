@@ -8,7 +8,8 @@ def generate_response(query):
 st.title("💬 업무비서 자비스")
 st.caption("🚀 A Streamlit chatbot powered by CRAFTERS")
 
-user_input = st.text_input("how can I help you, sir?")
-if user_input:
-    response = generate_response(user_input)
-    st.write("자비스:", response)
+if "messages" not in st.session_state:
+    st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
+
+for msg in st.session_state.messages:
+    st.chat_message(msg["role"]).write(msg["content"])
