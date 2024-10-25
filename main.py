@@ -17,4 +17,4 @@ if prompt := st.chat_input():
 
     msg = "답변" # 여기에 모델 답변 SET 하면 답변 출력됨
     st.session_state.messages.append({"role": "assistant", "content": msg})
-    st.chat_message("assistant").write(msg)
+    # st.chat_message("assistant").write(msg)
