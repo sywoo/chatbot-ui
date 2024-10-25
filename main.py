@@ -1,8 +1,10 @@
 import streamlit as st
 
-def generate_response(query):
-    # GPT-3.5를 이용한 응답 생성
-    return "GPT-3.5 응답: " + query
+with st.sidebar:
+    openai_api_key = st.text_input("OpenAI API Key", key="chatbot_api_key", type="password")
+    "[Get an OpenAI API key](https://platform.openai.com/account/api-keys)"
+    "[View the source code](https://github.com/streamlit/llm-examples/blob/main/Chatbot.py)"
+    "[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/streamlit/llm-examples?quickstart=1)"
 
 # st.title("자비스")
 st.title("💬 업무비서 자비스")
